@@ -65,9 +65,21 @@
 			return collection;
 		}
 
+		// append_text()
+		collection.addText = _text => {
+			for(let item of selector){
+				item.append(_text);
+			}
+			return collection;
+		}
 
-
-
+		// replace_text()
+		collection.replaceText = _text => {
+			for(let item of selector){
+				item.innerText = _text;
+			}
+			return collection;
+		}
 
 
 		// return
