@@ -57,6 +57,16 @@
 			return collection;
 		}
 
+		// background: background-color
+		collection.background = (_param = 'none') => {
+			for(let item of selector){
+				item.style.background = _param;
+			}
+			return collection;
+		}
+		// synonym
+		collection.bg = collection.background;
+
 		// float
 		collection.float = (_float = 'left') => {
 			for(let item of selector){
@@ -64,6 +74,13 @@
 			}
 			return collection;
 		}
+
+		// prevElement
+		///
+
+		// nextElement
+		///
+
 
 		// append_text()
 		collection.addText = _text => {
@@ -80,6 +97,21 @@
 			}
 			return collection;
 		}
+
+		// addClass
+		//
+
+
+		// removeClass
+		//
+
+
+		// replaceClass
+		//
+
+
+		// toggleClass
+		//
 
 
 		// return
