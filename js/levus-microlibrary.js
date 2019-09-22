@@ -48,6 +48,16 @@
 			}
 			return collection;
 		}
+		// synonym
+		collection.hide = collection.none;
+
+		// show item
+		collection.show = () => {
+			for(let item of selector){
+				item.style.display = '';
+			}
+			return collection;
+		}
 
 		// color: colorName
 		collection.color = (_color = 'black') => {
@@ -97,7 +107,7 @@
 			return collection;
 		}
 
-		// append_text()
+		// append text
 		collection.addText = _text => {
 			for(let item of selector){
 				item.append(_text);
@@ -105,7 +115,7 @@
 			return collection;
 		}
 
-		// replace_text()
+		// replace text
 		collection.replaceText = _text => {
 			for(let item of selector){
 				item.innerText = _text;
