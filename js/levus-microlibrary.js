@@ -99,15 +99,29 @@
 		}
 
 		// addClass
-		//
-
+		collection.addClass = (_text = 'no-name-class') => {
+			for(let item of selector){
+				item.classList.add(_text);
+			}
+			return collection;
+		}
 
 		// removeClass
-		//
+		collection.removeClass = (_text = '') => {
+			for(let item of selector){
+				item.classList.remove(_text);
+			}
+			return collection;
+		}
 
 
 		// replaceClass
-		//
+		collection.replaceClass = (_text = '') => {
+			for(let item of selector){
+				item.className = _text;
+			}
+			return collection;
+		}
 
 
 		// toggleClass
