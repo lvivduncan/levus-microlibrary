@@ -11,3 +11,15 @@ h1, h2, h3, h4, h5{
 #wrap{
 	padding: 50px 100px;
 }
+
+.red{
+	color: red;
+}
+
+.yellow{
+	color: yellow;
+}
+
+.green{
+	color: green;
+}
