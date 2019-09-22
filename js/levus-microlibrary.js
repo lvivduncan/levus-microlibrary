@@ -57,7 +57,7 @@
 			return collection;
 		}
 
-		// background: background-color
+		// background: param
 		collection.background = (_param = 'none') => {
 			for(let item of selector){
 				item.style.background = _param;
@@ -75,12 +75,27 @@
 			return collection;
 		}
 
-		// prevElement
-		///
+		// wrapper
+		collection.wrap = (_selector, _class) => {
+			for(let item of selector){
+				
+				const parent = item.parentNode;
 
-		// nextElement
-		///
+				const clone = item.cloneNode(true);
 
+				const wrap = document.createElement(_selector);
+
+				if(_class != null){
+					wrap.className = _class;
+				}
+
+				wrap.append(clone);
+
+				parent.replaceChild(wrap, item);
+
+			}
+			return collection;
+		}
 
 		// append_text()
 		collection.addText = _text => {
@@ -114,7 +129,6 @@
 			return collection;
 		}
 
-
 		// replaceClass
 		collection.replaceClass = (_text = '') => {
 			for(let item of selector){
@@ -123,9 +137,38 @@
 			return collection;
 		}
 
-
 		// toggleClass
-		//
+		collection.toggleClass = (_text) => {
+			for(let item of selector){
+				item.classList.toggle(_text);
+			}
+			return collection;
+		}
+
+		// addEventListener
+		collection.on = (_method, _function) => {
+			for(let item of selector){
+				item.addEventListener(_method, _function);
+			}
+			return collection;			
+		}
+
+		// addEventListener: click	
+		collection.click = _function => {
+			for(let item of selector){
+				item.addEventListener('click', _function);
+			}
+			return collection;			
+		}
+
+		// addEventListener: onmouseover	
+		collection.hover = _function => {
+			for(let item of selector){
+				item.addEventListener('mouseover', _function);
+			}
+			return collection;			
+		}
+
 
 
 		// return
