@@ -88,21 +88,14 @@
 		// wrapper
 		collection.wrap = (_selector, _class) => {
 			for(let item of selector){
-				
-				const parent = item.parentNode;
-
-				const clone = item.cloneNode(true);
-
-				const wrap = document.createElement(_selector);
-
+				const parent = item.parentNode,
+					  clone = item.cloneNode(true),
+					  wrap = document.createElement(_selector);
 				if(_class != null){
 					wrap.className = _class;
 				}
-
 				wrap.append(clone);
-
 				parent.replaceChild(wrap, item);
-
 			}
 			return collection;
 		}
