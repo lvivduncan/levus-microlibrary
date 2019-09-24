@@ -174,6 +174,8 @@
 
 		// return NodeList
 		collection.value = selector;
+		// synonym
+		collection.list = selector;
 
 		// return
 		return collection;
