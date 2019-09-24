@@ -172,7 +172,8 @@
 			return collection;			
 		}
 
-
+		// return NodeList
+		collection.value = selector;
 
 		// return
 		return collection;
