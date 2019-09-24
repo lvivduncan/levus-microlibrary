@@ -69,7 +69,7 @@ A('#footer').hover( () => {
 	A('#footer').toggleClass('green');
 });
 
-// отримати NodeList (аналог document.querySelector('li'))
+// отримати NodeList (аналог document.querySelectorAll('li'))
 const list = A('li').value;
 
 // end
