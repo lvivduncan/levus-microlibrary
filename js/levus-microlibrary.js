@@ -139,7 +139,7 @@
 		};
 
 		// toggleClass
-		collection.toggleClass = (_text) => {
+		collection.toggleClass = _text => {
 			for(let item of selector){
 				item.classList.toggle(_text);
 			}
@@ -171,9 +171,12 @@
 		};
 
 		// return NodeList
-		collection.value = selector;
-		// synonym
 		collection.list = selector;
+
+		// return element
+		collection.element = selector[0];
+		// synonym
+		collection.el = selector[0];
 
 		// return
 		return collection;
