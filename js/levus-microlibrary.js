@@ -211,17 +211,17 @@
 		};	
 
 		// get width
-		collection.getWidth = () => {
-			for(const item of selector){
-				item.clientWidth;
-				// if(item.length > 1){
+		// collection.getWidth = () => {
+		// 	for(const item of selector){
+		// 		item.clientWidth;
+		// 		// if(item.length > 1){
 
-				// } else{
-				// 	item.clientWidth;
-				// }
-			}
-			return collection;
-		};	
+		// 		// } else{
+		// 		// 	item.clientWidth;
+		// 		// }
+		// 	}
+		// 	return collection;
+		// };	
 
 
 
